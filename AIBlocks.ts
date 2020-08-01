@@ -90,27 +90,7 @@ namespace AI {
     export function compare1(value:number, value1:number) {
     /*Random Code*/
     }
-
-<<<<<<< local changes
-    //% block="compare %value| against %value1| find patterns and %_MLaction|"
-    export function compare2(value: void,
-    value1: void, _MLaction: actionML,
-    placeholder1:number, placeholder2:number) {
-    placeholder1 = 1;
-    placeholder2 = 2;
-    /*Random Code*/
-    }
-=======
-//     //% block="compare %value| against %value1| find patterns and %_MLaction|"
-//     export function compare1(value:,
-//     value1:, _MLaction: actionML,
-//     placeholder1:number, placeholder2:number) {
-//     placeholder1 = 1;
-//     placeholder2 = 2;
-//     /*Random Code*/
-//     }
->>>>>>> remote changes (pulled from Github)
-
+    
     //% block="train AI"
     export function train() {
     /*Random Code*/
