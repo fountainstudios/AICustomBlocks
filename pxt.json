@@ -1,0 +1,17 @@
+{
+    "name": "customblocks",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "AIBlocks.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "preferredEditor": "tsprj"
+}
