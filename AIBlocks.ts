@@ -82,7 +82,7 @@ namespace AI {
     }
 
     //% block="set goal to reach %Type|"
-    export function goal() {
+    export function goal(Type: void) {
     /*Random Code*/
     }
 
