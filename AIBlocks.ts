@@ -26,10 +26,13 @@ enum actionML {
 //% color="#4C97FF"
 namespace datasets {
 
-
     //% block="%type| dataset"
     export function onEvent(type: datasetType, handler: () => void) {
-    /*Random Code*/
+        if (datasetType == historical){
+            blocks.place(GRASS, (1,0,0));
+        }else{
+            blocks.place(GRASS, (2,0,0));
+        }
     }
 
     //% block="gather data"
@@ -56,6 +59,13 @@ namespace datasets {
     export function dataset2(): number {
         return 0;
     }
+
+    //% block="prepare data"
+    export function prepare() {
+        blocks.place(GRASS, (0,0,0));
+    /*Random Code*/
+    }
+
 }
 
 //% color="#8332A8"
@@ -63,6 +73,11 @@ namespace AI {
 
     //% block="%type| machine learning"
     export function onEvent(type: ML, handler: () => void) {
+    /*Random Code*/
+    }
+
+    //% block="%type| machine learning training"
+    export function onEvent1(type: ML, handler: () => void) {
     /*Random Code*/
     }
 
@@ -82,7 +97,7 @@ namespace AI {
     }
 
     //% block="set goal to reach %Type|"
-    export function goal(Type: void) {
+    export function goal() {
     /*Random Code*/
     }
 
