@@ -28,11 +28,11 @@ namespace datasets {
 
     //% block="%type| dataset"
     export function onEvent(type: datasetType, handler: () => void) {
-        if (datasetType == historical){
-            blocks.place(GRASS, (1,0,0));
-        }else{
-            blocks.place(GRASS, (2,0,0));
-        }
+        //if (type == historical){
+        //    //blocks.place(GRASS, (1,0,0));
+        //}else{
+        //    //blocks.place(GRASS, (2,0,0));
+        //}
     }
 
     //% block="gather data"
@@ -62,7 +62,7 @@ namespace datasets {
 
     //% block="prepare data"
     export function prepare() {
-        blocks.place(GRASS, (0,0,0));
+        //blocks.place(GRASS, (1,1,1));
     /*Random Code*/
     }
 
