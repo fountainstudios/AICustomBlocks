@@ -2,7 +2,9 @@ enum datasetType {
     //% block="historical"
     historical,
     //% block="current"
-    current
+    current,
+    //% block="live"
+    live,
 }
 
 enum ML {
@@ -28,11 +30,11 @@ namespace datasets {
 
     //% block="%type| dataset"
     export function onEvent(type: datasetType, handler: () => void) {
-        //if (type == 1){
-        //    blocks.place(GRASS, pos(1,0,0));
-        //}else{
-        //    blocks.place(GRASS, pos(2,0,0));
-        //}
+        if (type == 1){
+            blocks.place(GRASS, pos(1,0,0));
+        }else{
+            blocks.place(GRASS, pos(2,0,0));
+        }
     }
 
     //% block="gather data"
@@ -60,11 +62,45 @@ namespace datasets {
         return 0;
     }
 
+    //% block="live dataset"
+    export function dataset3(): number {
+        return 0;
+    }
+
     //% block="prepare data"
     export function prepare() {
         blocks.place(GRASS, pos(1,1,1));
     }
+}
+//% color="#ebdc34"
+namespace Input{
+        //% block="input photos"
+    export function photos(){
+    }
 
+    //% block="input arial photos"
+    export function Arialphotos(){
+    }
+
+    //% block="input weather satelite data"
+    export function weatherSatelite(){
+    }
+
+    //% block="input ground sensor data"
+    export function groundSensor(){
+    }
+
+    //% block="input water quality data"
+    export function waterquality(){
+    }
+
+    //% block="live distance sensor"
+    export function distanceSensor(){
+    }
+
+    //% block="live video feed"
+    export function videoFeed(){
+    }
 }
 
 //% color="#8332A8"
@@ -95,7 +131,7 @@ namespace AI {
     /*Random Code*/
     }
 
-    //% block="set goal to reach %Type|"
+    //% block="set goal to reach broken sensor"
     export function goal() {
     /*Random Code*/
     }
@@ -104,10 +140,31 @@ namespace AI {
     export function compare1(value:number, value1:number) {
     /*Random Code*/
     }
+
+    //% block="input %value|"
+    export function compare2(value:number) {
+    /*Random Code*/
+    }
     
     //% block="train AI"
     export function train() {
     /*Random Code*/
     }
+
+    //% block="find pollution location"
+    export function pollution() {
+    /*Random Code*/
+    }
+
+    //% block="find differences"
+    export function differences() {
+    /*Random Code*/
+    }
+
+    //% block="find best planting location"
+    export function plantingLocation() {
+    /*Random Code*/
+    }
+
 
 }
