@@ -2,8 +2,7 @@
     "name": "aicustomblocks",
     "version": "1.1.4",
     "dependencies": {
-        "core": "*",
-        "builder": "*"
+        "core": "*"
     },
     "files": [
         "AIBlocks.ts",
