@@ -6,7 +6,8 @@
     },
     "files": [
         "AIBlocks.ts",
-        "README.md"
+        "README.md",
+        "extension.ts"
     ],
     "testFiles": [
         "test.ts"
