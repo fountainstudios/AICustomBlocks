@@ -8,8 +8,7 @@
         ".vscode/tasks.json",
         "AIBlocks.ts",
         "README.md",
-        "test.ts",
-        "tsconfig.json"
+        "test.ts"
     ],
     "public": true,
     "targetVersions": {
