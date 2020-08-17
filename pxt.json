@@ -12,12 +12,5 @@
         "test.ts"
     ],
     "public": true,
-    "targetVersions": {
-        "target": "1.5.30",
-        "targetId": "minecraft"
-    },
-    "supportedTargets": [
-        "minecraft"
-    ],
     "preferredEditor": "tsprj"
 }
