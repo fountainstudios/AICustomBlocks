@@ -11,6 +11,7 @@
         "test.ts",
         "tsconfig.json"
     ],
+    "public": true,
     "targetVersions": {
         "target": "1.5.30",
         "targetId": "minecraft"
@@ -18,5 +19,8 @@
     "supportedTargets": [
         "minecraft"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "testfiles": [
+        "test.ts"
+    ]
 }
