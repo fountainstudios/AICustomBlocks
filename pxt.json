@@ -1,14 +1,12 @@
 {
-    "name": "aimakecodemarkdown",
+    "name": "aicustomblocks",
     "version": "1.1.4",
     "dependencies": {
         "core": "*"
     },
     "files": [
-        "ai_test.md",
-        "README.md",
-        "testAI.md",
-        "pyImportTest.md"
+        "AIBlocks.ts",
+        "tREADME.md",
     ],
     "public": true,
     "targetVersions": {
@@ -17,6 +15,9 @@
     },
     "supportedTargets": [
         "minecraft"
+    ],
+    "testFiles": [
+        "test.ts"
     ],
     "preferredEditor": "tsprj"
 }
