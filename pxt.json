@@ -1,23 +1,22 @@
 {
     "name": "aicustomblocks",
-    "version": "1.1.4",
     "dependencies": {
         "core": "*"
     },
     "files": [
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
         "AIBlocks.ts",
-        "tREADME.md",
+        "README.md",
+        "test.ts",
+        "tsconfig.json"
     ],
-    "public": true,
     "targetVersions": {
         "target": "1.5.30",
         "targetId": "minecraft"
     },
     "supportedTargets": [
         "minecraft"
-    ],
-    "testFiles": [
-        "test.ts"
     ],
     "preferredEditor": "tsprj"
 }
