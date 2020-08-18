@@ -72,7 +72,7 @@ namespace datasets {
         blocks.place(GRASS, pos(1,1,1));
     }
 }
-//% color="#ebdc34"
+//% color="#8c800b"
 namespace Input{
         //% block="input photos"
     export function photos(){
