@@ -74,17 +74,17 @@ namespace datasets {
     }
 
     //% block="historical dataset"
-    export function dataset1(): number {
+    export function historicalDataset(): number {
         return 0;
     }
 
     //% block="current dataset"
-    export function dataset2(): number {
+    export function currentDataset(): number {
         return 0;
     }
 
     //% block="live dataset"
-    export function dataset3(): number {
+    export function liveDataset(): number {
         return 0;
     }
 
