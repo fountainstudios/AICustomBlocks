@@ -47,12 +47,24 @@ namespace Input{
     export function waterquality(){
     }
 
-    //% block="live distance sensor"
-    export function distanceSensor(){
+    //% block="live sensor 1 data"
+    export function sensor1() {
+        blocks.place(STONE, pos(2, 2, 0));
     }
 
-    //% block="live video feed"
-    export function videoFeed(){
+    //% block="live sensor 2 data"
+    export function sensor2() {
+        blocks.place(STONE, pos(2, 3, 0));
+    }
+
+    //% block="live sensor 3 data"
+    export function sensor3() {
+        blocks.place(STONE, pos(2, 4, 0));
+    }
+
+    //% block="live sensor 4 data"
+    export function sensor4() {
+        blocks.place(STONE, pos(2, 5, 0));
     }
 }
 
@@ -109,6 +121,11 @@ namespace AI {
     /*Random Code*/
     }
 
+    //% block="analyze terrain data"
+    export function analyze(){
+        blocks.place(STONE, pos(2, 6, 0));
+    }
+
 }
 
 //% color="#2d854e"
@@ -142,5 +159,37 @@ namespace Goals {
     //% block="reach broken sensor"
     export function goal() {
     /*Random Code*/
+    }
+
+    //% block="Agent reach sensor 1"
+    export function reach1() {
+    agent.move(FORWARD, 4);
+    agent.turn(TurnDirection.Right);
+    agent.move(FORWARD, 3);
+    agent.destroy(FORWARD);
+    agent.place(FORWARD);
+    blocks.place(STONE, pos(4, 2, 0));
+    agent.teleport(pos(0, 0, 0), WEST);
+    }
+
+    //% block="Agent reach sensor 2"
+    export function reach2() {
+    blocks.place(STONE, pos(2, 7, 0))
+    }
+
+    //% block="Agent reach sensor 3"
+    export function reach3() {
+    agent.move(FORWARD, 4);
+    agent.turn(TurnDirection.Left);
+    agent.move(FORWARD, 3);
+    agent.destroy(FORWARD);
+    agent.place(FORWARD);
+    blocks.place(STONE, pos(4, 1, 0));
+    agent.teleport(pos(0, 0, 0), WEST);
+    }
+
+    //% block="Agent reach sensor 4"
+    export function reach4() {
+    blocks.place(STONE, pos(2, 8, 0))
     }
 }
