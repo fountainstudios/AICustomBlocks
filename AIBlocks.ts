@@ -49,22 +49,22 @@ namespace Input{
 
     //% block="live sensor 1 data"
     export function sensor1() {
-        blocks.place(STONE, pos(2, 2, 0));
+        blocks.place(STONE, world(1, 1, 0));
     }
 
     //% block="live sensor 2 data"
     export function sensor2() {
-        blocks.place(STONE, pos(2, 3, 0));
+        blocks.place(STONE, world(1, 2, 0));
     }
 
     //% block="live sensor 3 data"
     export function sensor3() {
-        blocks.place(STONE, pos(2, 4, 0));
+        blocks.place(STONE, world(1, 3, 0));
     }
 
     //% block="live sensor 4 data"
     export function sensor4() {
-        blocks.place(STONE, pos(2, 5, 0));
+        blocks.place(STONE, world(1, 4, 0));
     }
 }
 
@@ -74,9 +74,9 @@ namespace datasets {
     //% block="%type| dataset"
     export function onEvent(type: datasetType, handler: () => void) {
         if (type == 1){
-            blocks.place(GRASS, pos(1,0,0));
+            blocks.place(GRASS, world(2,1,0));
         }else{
-            blocks.place(GRASS, pos(2,0,0));
+            blocks.place(GRASS, world(2,2,0));
         }
     }
 
@@ -92,12 +92,12 @@ namespace datasets {
 
     //% block="current dataset"
     export function currentDataset(): number {
-        return 0;
+        return 1;
     }
 
     //% block="live dataset"
     export function liveDataset(): number {
-        return 0;
+        return 2;
     }
 
 }
@@ -123,7 +123,7 @@ namespace AI {
 
     //% block="analyze terrain data"
     export function analyze(){
-        blocks.place(STONE, pos(2, 6, 0));
+        blocks.place(STONE, world(3, 1, 0));
     }
 
 }
@@ -168,13 +168,13 @@ namespace Goals {
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
     agent.place(FORWARD);
-    blocks.place(STONE, pos(4, 2, 0));
-    agent.teleport(pos(0, 0, 0), WEST);
+    blocks.place(STONE, world(4, 1, 0));
+    agent.teleport(world(0, 0, 0), WEST);
     }
 
     //% block="Agent reach sensor 2"
     export function reach2() {
-    blocks.place(STONE, pos(2, 7, 0))
+    blocks.place(STONE, world(4, 2, 0));
     }
 
     //% block="Agent reach sensor 3"
@@ -184,12 +184,12 @@ namespace Goals {
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
     agent.place(FORWARD);
-    blocks.place(STONE, pos(4, 1, 0));
-    agent.teleport(pos(0, 0, 0), WEST);
+    blocks.place(STONE, world(4, 3, 0));
+    agent.teleport(world(0, 0, 0), WEST);
     }
 
     //% block="Agent reach sensor 4"
     export function reach4() {
-    blocks.place(STONE, pos(2, 8, 0))
+    blocks.place(STONE, world(4, 4, 0));
     }
 }
