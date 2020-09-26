@@ -71,8 +71,9 @@ namespace Input{
 //% color="#4C97FF"
 namespace datasets {
 
-    //% block="%type| dataset"
-    export function onEvent(type: datasetType, handler: () => 2) {
+    //% block="%type| datasett"
+    export function onEvent(arg: datasetType, handler: (handlerArg: 2) => void) {
+        
 
     }
 
@@ -82,18 +83,21 @@ namespace datasets {
     }
 
     //% block="historical dataset"
+    //% draggableParameter
     export function historicalDataset(): number {
         return 0;
     }
 
     //% block="current dataset"
+    //% draggableParameters
     export function currentDataset(): number {
-
-        return 0;
+        return 1;
     }
 
     //% block="live dataset"
-    export function liveDataset() {
+    //% draggableParameters
+    export function liveDataset(): number {
+        return 2;
     }
 
 }
