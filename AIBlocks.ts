@@ -1,10 +1,10 @@
 enum datasetType {
     //% block="historical"
-    historical,
+    historical = 0,
     //% block="current"
-    current,
+    current = 1,
     //% block="live"
-    live,
+    live = 2,
 }
 
 enum ML {
@@ -72,7 +72,8 @@ namespace Input{
 namespace datasets {
 
     //% block="%type| dataset"
-    export function onEvent(type: datasetType, handler: () => void) {
+    export function onEvent(type: datasetType, handler: () => 2) {
+
     }
 
     //% block="label data"
@@ -118,7 +119,7 @@ namespace AI {
 
     //% block="analyze terrain data"
     export function analyze(){
-        blocks.place(STONE, world(3, 4, 1));
+        blocks.place(STONE, world(2, 4, 1));
     }
 
 }
@@ -163,13 +164,13 @@ namespace Goals {
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
     agent.place(FORWARD);
-    blocks.place(STONE, world(4, 4, 1));
+    blocks.place(STONE, world(3, 4, 1));
     agent.teleport(world(0, 4, 0), WEST);
     }
 
     //% block="Agent reach sensor 2"
     export function reach2() {
-    blocks.place(STONE, world(4, 4, 2));
+    blocks.place(STONE, world(3, 4, 2));
     }
 
     //% block="Agent reach sensor 3"
@@ -179,12 +180,12 @@ namespace Goals {
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
     agent.place(FORWARD);
-    blocks.place(STONE, world(4, 4, 3));
+    blocks.place(STONE, world(3, 4, 3));
     agent.teleport(world(0, 4, 0), WEST);
     }
 
     //% block="Agent reach sensor 4"
     export function reach4() {
-    blocks.place(STONE, world(4, 4, 4));
+    blocks.place(STONE, world(0, 4, 4));
     }
 }
