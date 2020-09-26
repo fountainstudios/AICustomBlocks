@@ -73,11 +73,6 @@ namespace datasets {
 
     //% block="%type| dataset"
     export function onEvent(type: datasetType, handler: () => void) {
-        if (type == 1){
-            blocks.place(GRASS, world(2, 4, 1));
-        }else{
-            blocks.place(GRASS, world(2, 4, 2));
-        }
     }
 
     //% block="label data"
@@ -97,7 +92,7 @@ namespace datasets {
     }
 
     //% block="live dataset"
-    export function liveDataset(): void {
+    export function liveDataset() {
     }
 
 }
