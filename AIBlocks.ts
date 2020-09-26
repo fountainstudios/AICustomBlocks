@@ -92,12 +92,12 @@ namespace datasets {
 
     //% block="current dataset"
     export function currentDataset(): number {
-        return 1;
+
+        return 0;
     }
 
     //% block="live dataset"
-    export function liveDataset(): number {
-        return 2;
+    export function liveDataset(): void {
     }
 
 }
