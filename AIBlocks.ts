@@ -49,22 +49,22 @@ namespace Input{
 
     //% block="live sensor 1 data"
     export function sensor1() {
-        blocks.place(STONE, world(1, 1, 0));
+        blocks.place(STONE, world(1, 4, 1));
     }
 
     //% block="live sensor 2 data"
     export function sensor2() {
-        blocks.place(STONE, world(1, 2, 0));
+        blocks.place(STONE, world(1, 4, 2));
     }
 
     //% block="live sensor 3 data"
     export function sensor3() {
-        blocks.place(STONE, world(1, 3, 0));
+        blocks.place(STONE, world(1, 4, 3));
     }
 
     //% block="live sensor 4 data"
     export function sensor4() {
-        blocks.place(STONE, world(1, 4, 0));
+        blocks.place(STONE, world(1, 4, 4));
     }
 }
 
@@ -74,9 +74,9 @@ namespace datasets {
     //% block="%type| dataset"
     export function onEvent(type: datasetType, handler: () => void) {
         if (type == 1){
-            blocks.place(GRASS, world(2,1,0));
+            blocks.place(GRASS, world(2, 4, 1));
         }else{
-            blocks.place(GRASS, world(2,2,0));
+            blocks.place(GRASS, world(2, 4, 2));
         }
     }
 
@@ -123,7 +123,7 @@ namespace AI {
 
     //% block="analyze terrain data"
     export function analyze(){
-        blocks.place(STONE, world(3, 1, 0));
+        blocks.place(STONE, world(3, 4, 1));
     }
 
 }
@@ -168,13 +168,13 @@ namespace Goals {
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
     agent.place(FORWARD);
-    blocks.place(STONE, world(4, 1, 0));
+    blocks.place(STONE, world(4, 4, 1));
     agent.teleport(world(0, 0, 0), WEST);
     }
 
     //% block="Agent reach sensor 2"
     export function reach2() {
-    blocks.place(STONE, world(4, 2, 0));
+    blocks.place(STONE, world(4, 4, 2));
     }
 
     //% block="Agent reach sensor 3"
@@ -184,12 +184,12 @@ namespace Goals {
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
     agent.place(FORWARD);
-    blocks.place(STONE, world(4, 3, 0));
+    blocks.place(STONE, world(4, 4, 3));
     agent.teleport(world(0, 0, 0), WEST);
     }
 
     //% block="Agent reach sensor 4"
     export function reach4() {
-    blocks.place(STONE, world(4, 4, 0));
+    blocks.place(STONE, world(4, 4, 4));
     }
 }
