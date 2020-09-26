@@ -164,7 +164,7 @@ namespace Goals {
     agent.destroy(FORWARD);
     agent.place(FORWARD);
     blocks.place(STONE, world(4, 4, 1));
-    agent.teleport(world(0, 0, 0), WEST);
+    agent.teleport(world(0, 4, 0), WEST);
     }
 
     //% block="Agent reach sensor 2"
@@ -180,7 +180,7 @@ namespace Goals {
     agent.destroy(FORWARD);
     agent.place(FORWARD);
     blocks.place(STONE, world(4, 4, 3));
-    agent.teleport(world(0, 0, 0), WEST);
+    agent.teleport(world(0, 4, 0), WEST);
     }
 
     //% block="Agent reach sensor 4"
