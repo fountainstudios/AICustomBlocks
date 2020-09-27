@@ -72,7 +72,7 @@ namespace Input{
 namespace datasets {
 
     //% block="%type| datasett"
-    export function onEvent(arg: datasetType, handler: (handlerArg: 2) => void) {
+    export function onEvent(arg: datasetType, handler: (datasetType: 2) => void) {
         
 
     }
@@ -167,6 +167,7 @@ namespace Goals {
     agent.turn(TurnDirection.Right);
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
+    agent.collectAll()
     agent.place(FORWARD);
     blocks.place(STONE, world(3, 4, 1));
     agent.teleport(world(0, 4, 0), WEST);
@@ -183,6 +184,7 @@ namespace Goals {
     agent.turn(TurnDirection.Left);
     agent.move(FORWARD, 3);
     agent.destroy(FORWARD);
+    agent.collectAll()
     agent.place(FORWARD);
     blocks.place(STONE, world(3, 4, 3));
     agent.teleport(world(0, 4, 0), WEST);
@@ -190,6 +192,6 @@ namespace Goals {
 
     //% block="Agent reach sensor 4"
     export function reach4() {
-    blocks.place(STONE, world(0, 4, 4));
+    blocks.place(STONE, world(3, 4, 4));
     }
 }
