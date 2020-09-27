@@ -72,9 +72,11 @@ namespace Input{
 namespace datasets {
 
     //% block="%type| dataset"
-    export function onEvent(type:datasetType, handle:() => void) {
+    export function onEvent(type: datasetType, handle:() => void) {
         if(type == 2){
-            
+            player.onChat("start", function() {
+                
+            })
         }
     }
 
