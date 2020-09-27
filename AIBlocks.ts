@@ -84,19 +84,16 @@ namespace datasets {
     }
 
     //% block="historical dataset"
-    //% draggableParameters
     export function historicalDataset(): number {
         return 0;
     }
 
     //% block="current dataset"
-    //% draggableParameters
     export function currentDataset(): number {
         return 1;
     }
 
     //% block="live dataset"
-    //% draggableParameters
     export function liveDataset(): number {
         return 2;
     }
@@ -118,6 +115,7 @@ namespace AI {
     }
 
     //% block="input %value|"
+    //% draggableParameters
     export function compare2(value:number) {
     /*Random Code*/
     }
