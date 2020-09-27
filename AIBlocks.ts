@@ -83,7 +83,7 @@ namespace datasets {
     }
 
     //% block="historical dataset"
-    //% draggableParameter
+    //% draggableParameters
     export function historicalDataset(): number {
         return 0;
     }
