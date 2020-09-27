@@ -71,8 +71,8 @@ namespace Input{
 //% color="#4C97FF"
 namespace datasets {
 
-    //% block="%type| dataset"
-    export function onEvent(arg: datasetType, handler: (arg: 2) => void) {
+    //% block="%type| dataaset"
+    export function onEvent(handler: (datasetType : 2) => void) {
         
 
     }
