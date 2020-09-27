@@ -4,7 +4,7 @@ enum datasetType {
     //% block="current"
     current = 1,
     //% block="live"
-    live = 2,
+    live =  2
 }
 
 enum ML {
@@ -71,10 +71,11 @@ namespace Input{
 //% color="#4C97FF"
 namespace datasets {
 
-    //% block="%type| dataaset"
-    export function onEvent(handler: (datasetType : 2) => void) {
-        
-
+    //% block="%arg| dataset"
+    export function onEvent(arg:datasetType, handle:() => void) {
+        if(arg == 2){
+            handle;
+        }
     }
 
     //% block="label data"
