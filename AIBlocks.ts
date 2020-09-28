@@ -117,7 +117,6 @@ namespace AI {
     }
 
     //% block="input %value|"
-    //% draggableParameters
     export function compare2(value:number) {
     /*Random Code*/
     }
