@@ -27,27 +27,8 @@ enum actionML {
 
 //% color="#8c800b"
 namespace Input{
-    //% block="input photos"
-    export function photos(){
-    }
-
-    //% block="input arial photos"
-    export function Arialphotos(){
-    }
-
-    //% block="input weather satelite data"
-    export function weatherSatelite(){
-    }
-
-    //% block="input ground sensor data"
-    export function groundSensor(){
-    }
-
-    //% block="input water quality data"
-    export function waterquality(){
-    }
-
-    //% block="live sensor 1 data"
+ 
+     //% block="live sensor 1 data"
     export function sensor1() {
         blocks.place(STONE, world(1, 4, 1));
     }
@@ -66,6 +47,22 @@ namespace Input{
     export function sensor4() {
         blocks.place(STONE, world(1, 4, 4));
     }
+
+    //% block="location 1 picture data"
+    export function location1PictureData() {
+        blocks.place(STONE, world(96, 61, -397));
+    }
+
+    //% block="location 2 picture data"
+    export function location2PictureData() {
+        blocks.place(STONE, world(96, 61, -396));
+    }
+
+    //% block="location 3 picture data"
+    export function location3PictureData() {
+        blocks.place(STONE, world(96, 61, -395));
+    }
+
 }
 
 //% color="#4C97FF"
@@ -78,6 +75,11 @@ namespace datasets {
                 
             })
         }
+    }
+
+    //% block="%type| dataset"
+    export function onEvent1(handle:() => void) {
+        blocks.place(STONE, world(96, 61, -398));
     }
 
     //% block="label data"
@@ -107,8 +109,13 @@ namespace datasets {
 namespace AI {
 
     //% block="machine learning"
-    export function onEvent3(handler: () => void) {
-    /*Random Code*/
+    export function mlOceanObservations(handler: () => void) {
+    blocks.place(STONE, world(1, 1, 1));
+    }
+
+    //% block="machine learning"
+    export function mlMappingTerrain(handler: () => void) {
+    blocks.place(STONE, world(110, 61, -398));
     }
 
     //% block="compare a %value| against a %value1|"
@@ -117,16 +124,22 @@ namespace AI {
     }
 
     //% block="input %value|"
-    export function compare2(value:number) {
+    export function inputOceanObservation(value:number) {
     /*Random Code*/
     }
 
-    //% block="analyze terrain data"
-    export function analyze(){
-        blocks.place(STONE, world(2, 4, 1));
+    //% block="input dataset"
+    export function inputMappingTerrain(value:number) {
+    /*Random Code*/
+    }
+
+    //% block="analyze data"
+    export function analyze1(){
+        blocks.place(STONE, world(110, 61, -396));
     }
 
 }
+
 
 //% color="#2d854e"
 namespace Goals {
