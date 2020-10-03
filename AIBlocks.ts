@@ -70,7 +70,7 @@ namespace Input{
 }
 
 //% color="#4C97FF"
-namespace datasets {
+namespace Datasets {
 
     //% block="%type| dataset"
     //% draggableParameters 
