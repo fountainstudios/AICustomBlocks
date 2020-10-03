@@ -128,7 +128,7 @@ namespace AI {
     }
 
     //% block="input dataset"
-    export function inputMappingTerrain(value:number) {
+    export function inputMappingTerrain() {
     blocks.place(STONE, world(110, 61, -397));
     }
     
@@ -137,7 +137,7 @@ namespace AI {
         blocks.place(STONE, world(110, 61, -396));
     }
 
-    //% block="palce markers"
+    //% block="place markers"
     export function placeMarkersMappingTerrain(){
         blocks.place(STONE, world(110, 61, -395));
     }
