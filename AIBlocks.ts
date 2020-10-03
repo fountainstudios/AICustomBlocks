@@ -69,11 +69,10 @@ namespace Input{
 namespace datasets {
 
     //% block="%type| dataset"
+    //% draggableParameters 
     export function onEvent(type: datasetType, handle:() => void) {
         if(type == 2){
-            player.onChat("start", function() {
-                
-            })
+            handle();
         }
     }
 
