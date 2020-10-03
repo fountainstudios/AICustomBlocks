@@ -104,7 +104,6 @@ namespace datasets {
 
 }
 
-
 //% color="#8332A8"
 namespace AI {
 
@@ -130,12 +129,17 @@ namespace AI {
 
     //% block="input dataset"
     export function inputMappingTerrain(value:number) {
-    /*Random Code*/
+    blocks.place(STONE, world(110, 61, -397));
+    }
+    
+    //% block="analyze data"
+    export function analyzeMappingTerrain(){
+        blocks.place(STONE, world(110, 61, -396));
     }
 
-    //% block="analyze data"
-    export function analyze1(){
-        blocks.place(STONE, world(110, 61, -396));
+    //% block="palce markers"
+    export function placeMarkersMappingTerrain(){
+        blocks.place(STONE, world(110, 61, -395));
     }
 
 }
