@@ -74,7 +74,7 @@ namespace datasets {
 
     //% block="%type| dataset"
     //% draggableParameters 
-    export function onEvent(type: datasetType, handler:() => true) {
+    export function onEvent(type: datasetType, handler:() => void) {
         if(type == 2){
             handler();
         }
