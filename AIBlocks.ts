@@ -25,6 +25,10 @@ enum actionML {
     getPrediction
 }
 
+function handler(){
+return true;
+}
+
 //% color="#8c800b"
 namespace Input{
  
@@ -70,14 +74,14 @@ namespace datasets {
 
     //% block="%type| dataset"
     //% draggableParameters 
-    export function onEvent(type: datasetType, handle:() => void) {
+    export function onEvent(type: datasetType, handler:() => true) {
         if(type == 2){
-            handle();
+            handler();
         }
     }
 
     //% block="%type| dataset"
-    export function onEvent1(handle:() => void) {
+    export function onEvent1(handler:() => void) {
         blocks.place(STONE, world(96, 61, -398));
     }
 
@@ -107,8 +111,8 @@ namespace datasets {
 namespace AI {
 
     //% block="machine learning"
-    export function mlOceanObservations(handler: () => void) {
-    blocks.place(STONE, world(1, 1, 1));
+    export function mlOceanObservations(handler: () => true) {
+            handler();
     }
 
     //% block="machine learning"
