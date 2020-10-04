@@ -103,13 +103,14 @@ namespace AI {
     blocks.place(STONE, world(0, 4, 0));
     }
 
-    //% block="machine learning"
-    //% optionalVariableArgs
-    export function mlOceanObservations(handler: () => true) {
-        handler();
-    }
+    `//% block="machine learning"
+     //% optionalVariableArgs
+     export function mlOceanObservations(handler: () => true) {
+         handler();
+    }`
     
     //% block="machine learning"
+    //% handlerStatement=1
     export function mlMappingTerrain(handler: () => void) {
     blocks.place(STONE, world(110, 61, -398));
     }
