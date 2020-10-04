@@ -66,7 +66,7 @@ namespace Input{
 }
 
 //% color="#4C97FF"
-namespace DATA {
+namespace DATASET {
 
     //% block="%type| dataset"
     //% draggableParameters 
