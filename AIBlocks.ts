@@ -102,12 +102,17 @@ namespace Datasets {
 //% color="#8332A8"
 namespace AI {
 
+    //% block="place block test"
+    export function placeBlockTest(){
+    blocks.place(STONE, world(0, 4, 0));
+    }
+
     //% block="machine learning"
     //% optionalVariableArgs
     export function mlOceanObservations(handler: () => true) {
         handler();
     }
-
+    
     //% block="machine learning"
     export function mlMappingTerrain(handler: () => void) {
     blocks.place(STONE, world(110, 61, -398));
