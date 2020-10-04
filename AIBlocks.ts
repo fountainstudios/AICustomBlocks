@@ -102,8 +102,8 @@ namespace Datasets {
 //% color="#8332A8"
 namespace AI {
 
-    //% block="place block test"
-    export function placeBlockTest(){
+    //% block="place block"
+    export function placeBlock(){
     blocks.place(STONE, world(0, 4, 0));
     }
 
