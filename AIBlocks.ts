@@ -25,10 +25,6 @@ enum actionML {
     getPrediction
 }
 
-function handler(){
-return true;
-}
-
 //% color="#8c800b"
 namespace Input{
  
@@ -70,7 +66,7 @@ namespace Input{
 }
 
 //% color="#4C97FF"
-namespace Datasets {
+namespace DATA {
 
     //% block="%type| dataset"
     //% draggableParameters 
