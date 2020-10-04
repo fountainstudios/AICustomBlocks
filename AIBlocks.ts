@@ -76,18 +76,10 @@ namespace Datasets {
     //% draggableParameters 
     export function onEvent(type: datasetType, handler:() => void) {
         if(type == 2){
-            handler();
+            handler;{
+                blocks.place(STONE, world(0, 4, 0));
+            }
         }
-    }
-
-    //% block="%type| dataset"
-    export function onEvent1(handler:() => void) {
-        blocks.place(STONE, world(96, 61, -398));
-    }
-
-    //% block="label data"
-    export function data3() {
-    /*Random Code*/
     }
 
     //% block="historical dataset"
@@ -111,18 +103,14 @@ namespace Datasets {
 namespace AI {
 
     //% block="machine learning"
+    //% optionalVariableArgs
     export function mlOceanObservations(handler: () => true) {
-            handler();
+        handler();
     }
 
     //% block="machine learning"
     export function mlMappingTerrain(handler: () => void) {
     blocks.place(STONE, world(110, 61, -398));
-    }
-
-    //% block="compare a %value| against a %value1|"
-    export function compare1(value:number, value1:number) {
-    /*Random Code*/
     }
 
     //% block="input %value|"
@@ -147,39 +135,8 @@ namespace AI {
 
 }
 
-
 //% color="#2d854e"
 namespace Goals {
-    
-    //% block="find pollution location"
-    export function pollution() {
-    /*Random Code*/
-    }
-
-    //% block="find differences"
-    export function differences() {
-    /*Random Code*/
-    }
-
-    //% block="find best planting location"
-    export function plantingLocation() {
-    /*Random Code*/
-    }
-    
-     //% block="find pattern and classify|"
-    export function classify() {
-    /*Random Code*/
-    }
-
-    //% block="find pattern and get prediction|"
-    export function prediction() {
-    /*Random Code*/
-    }
-
-    //% block="reach broken sensor"
-    export function goal() {
-    /*Random Code*/
-    }
 
     //% block="Agent reach sensor 1"
     export function reach1() {
