@@ -63,6 +63,11 @@ namespace Input{
         blocks.place(STONE, world(96, 61, -395));
     }
 
+    //% block="live dataset"
+    export function liveDataset(): number {
+        return 0;
+    }
+
 }
 
 //% color="#4C97FF"
