@@ -113,6 +113,7 @@ namespace AI {
     //% handlerStatement=1
     export function mlMappingTerrain(handler: () => void) {
     blocks.place(STONE, world(110, 61, -398));
+    handler();
     }
 
     //% block="input %value|"
