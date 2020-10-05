@@ -18,13 +18,6 @@ enum ML {
     reinforcment
 }
 
-enum actionML {
-    //% block="classify"
-    classify,
-    //% block="get prediction"
-    getPrediction
-}
-
 //% color="#8c800b"
 namespace Input{
 
@@ -122,7 +115,25 @@ namespace AI {
     //% block="machine learning"
     //% handlerStatement=1
     export function ml_OO(handler: () => true) {
-         handler();
+        blocks.place(STONE, world(10, 10, 10)) 
+        handler();
+    }
+
+    //% block="analyze terrain data"
+    export function analyze_OO(){
+        blocks.place(STONE, world(10, 11, 10)) 
+    }
+
+    //% block="input %blockType|"
+    export function input_OO(blockType:number){
+        if(blockType == 2){
+           blocks.place(STONE, world(10, 12, 10))  
+        }
+    }
+
+    //% block="generate routes"
+    export function genRoutes_OO(){
+        blocks.place(STONE, world(10, 13, 10))  
     }
 
 }
