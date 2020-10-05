@@ -63,9 +63,14 @@ namespace Datasets {
 
     //% block="%type| dataset"
     //% handlerStatement=1
-    export function setOfData_MT(type: datasetType, handler: () => void) {
+    export function setOfData_MT(handler: () => void) {
+    blocks.place(STONE, world(96, 61, -398));
+    handler();
+    }
+
+    export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
-            blocks.place(STONE, world(96, 61, -398));
+            blocks.place(STONE, world(0, 0, 100));
         }
     handler();
     }
