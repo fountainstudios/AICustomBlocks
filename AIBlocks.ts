@@ -63,11 +63,6 @@ namespace Input{
         blocks.place(STONE, world(96, 61, -395));
     }
 
-    //% block="live dataset"
-    export function liveDataset(): number {
-        return 0;
-    }
-Datasets.test()
 }
 
 //% color="#4C97FF"
@@ -76,7 +71,14 @@ namespace Datasets {
     //% block="testy"
     export function test(){
     }
-Datasets.test()
+
+    //% block="dataset"
+    //% handlerStatement=1
+    export function setOfdata(handler: () => void) {
+    blocks.place(STONE, world(0, 4, 1));
+    handler();
+    }
+
 }
 
 //% color="#8332A8"
