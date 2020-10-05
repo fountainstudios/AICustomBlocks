@@ -28,39 +28,39 @@ enum actionML {
 //% color="#8c800b"
 namespace Input{
 
-     //% block="live sensor 1 data"
-    export function sensor1() {
-        blocks.place(STONE, world(1, 4, 1));
-    }
-
-    //% block="live sensor 2 data"
-    export function sensor2() {
-        blocks.place(STONE, world(1, 4, 2));
-    }
-
-    //% block="live sensor 3 data"
-    export function sensor3() {
-        blocks.place(STONE, world(1, 4, 3));
-    }
-
-    //% block="live sensor 4 data"
-    export function sensor4() {
-        blocks.place(STONE, world(1, 4, 4));
-    }
-
     //% block="location 1 picture data"
-    export function location1PictureData() {
+    export function location1PictureData_MT() {
         blocks.place(STONE, world(96, 61, -397));
     }
 
     //% block="location 2 picture data"
-    export function location2PictureData() {
+    export function location2PictureData_MT() {
         blocks.place(STONE, world(96, 61, -396));
     }
 
     //% block="location 3 picture data"
-    export function location3PictureData() {
+    export function location3PictureData_MT() {
         blocks.place(STONE, world(96, 61, -395));
+    }
+
+         //% block="live sensor 1 data"
+    export function sensor1_OO() {
+        blocks.place(STONE, world(1, 4, 1));
+    }
+
+    //% block="live sensor 2 data"
+    export function sensor2_OO() {
+        blocks.place(STONE, world(1, 4, 2));
+    }
+
+    //% block="live sensor 3 data"
+    export function sensor3_OO() {
+        blocks.place(STONE, world(1, 4, 3));
+    }
+
+    //% block="live sensor 4 data"
+    export function sensor4_OO() {
+        blocks.place(STONE, world(1, 4, 4));
     }
 
 }
@@ -68,58 +68,61 @@ namespace Input{
 //% color="#4C97FF"
 namespace Datasets {
 
-    //% block="testy"
-    export function test(){
+    //% block="%type| dataset"
+    //% handlerStatement=1
+    export function setOfData_MT(type: datasetType, handler: () => void) {
+        if(type == 2){
+            blocks.place(STONE, world(96, 61, -398));
+        }
+    handler();
     }
 
-    //% block="dataset"
-    //% handlerStatement=1
-    export function setOfdata(handler: () => void) {
-    blocks.place(STONE, world(0, 4, 1));
-    handler();
+    //% block="historical dataset"
+    export function historicalDataset(): number{
+    return 0;
+    }
+
+    //% block="current dataset"
+    export function currentDataset(): number {
+    return 1;
+    }
+
+    //% block="live dataset"
+    export function liveDataset(): number {
+    return 2;
     }
 
 }
 
 //% color="#8332A8"
 namespace AI {
-
-    //% block="place block"
-    export function placeBlock(){
-    blocks.place(STONE, world(0, 4, 0));
-    }
-
-    `//% block="machine learning"
-     //% optionalVariableArgs
-     export function mlOceanObservations(handler: () => true) {
-         handler();
-    }`
     
     //% block="machine learning"
     //% handlerStatement=1
-    export function mlMappingTerrain(handler: () => void) {
+    export function ml_MT(handler: () => void) {
     blocks.place(STONE, world(110, 61, -398));
     handler();
     }
 
-    //% block="input %value|"
-    export function inputOceanObservation(value:number) {
-    /*Random Code*/
-    }
-
     //% block="input dataset"
-    export function inputMappingTerrain() {
+    export function input_MT() {
     blocks.place(STONE, world(110, 61, -397));
     }
     
     //% block="analyze data"
-    export function analyzeMappingTerrain(){
+    export function analyze_MT(){
         blocks.place(STONE, world(110, 61, -396));
     }
 
     //% block="place markers"
-    export function placeMarkersMappingTerrain(){
+    export function placeMarkers_MT(){
         blocks.place(STONE, world(110, 61, -395));
+    }
+
+    //% block="machine learning"
+    //% handlerStatement=1
+    export function ml_OO(handler: () => true) {
+         handler();
     }
 
 }
@@ -128,7 +131,7 @@ namespace AI {
 namespace Goals {
 
     //% block="Agent reach sensor 1"
-    export function reach1() {
+    export function reach1_OO() {
     agent.move(FORWARD, 4);
     agent.turn(TurnDirection.Right);
     agent.move(FORWARD, 3);
@@ -140,12 +143,12 @@ namespace Goals {
     }
 
     //% block="Agent reach sensor 2"
-    export function reach2() {
+    export function reach2_OO() {
     blocks.place(STONE, world(3, 4, 2));
     }
 
     //% block="Agent reach sensor 3"
-    export function reach3() {
+    export function reach3_OO() {
     agent.move(FORWARD, 4);
     agent.turn(TurnDirection.Left);
     agent.move(FORWARD, 3);
@@ -157,7 +160,8 @@ namespace Goals {
     }
 
     //% block="Agent reach sensor 4"
-    export function reach4() {
+    export function reach4_OO() {
     blocks.place(STONE, world(3, 4, 4));
     }
 }
+
