@@ -74,8 +74,7 @@ Datasets.test()
 namespace Datasets {
 
     //% block="%type| dataset"
-    //% draggableParameters 
-    export function onEvent(type: datasetType, handler:() => void) {
+    export function dataset(type: datasetType, handler:() => void) {
         `if(type == 2){
             handler;{
                 blocks.place(STONE, world(0, 4, 0));
@@ -83,7 +82,8 @@ namespace Datasets {
         }`
     }
 
-    //% block="historical dataset"
+
+    `//% block="historical dataset"
     export function historicalDataset(): number {
         return 0;
     }
@@ -97,6 +97,7 @@ namespace Datasets {
     export function liveDataset(): number {
         return 0;
     }
+    `
 
     //% block="test"
     export function test(){
