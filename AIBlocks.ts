@@ -67,7 +67,7 @@ namespace Input{
     export function liveDataset(): number {
         return 0;
     }
-
+Datasets.test()
 }
 
 //% color="#4C97FF"
