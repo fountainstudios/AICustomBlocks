@@ -76,11 +76,11 @@ namespace Datasets {
     //% block="%type| dataset"
     //% draggableParameters 
     export function onEvent(type: datasetType, handler:() => void) {
-        if(type == 2){
+        `if(type == 2){
             handler;{
                 blocks.place(STONE, world(0, 4, 0));
             }
-        }
+        }`
     }
 
     //% block="historical dataset"
