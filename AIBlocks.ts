@@ -85,12 +85,12 @@ namespace Datasets {
 
     //% block="current dataset"
     export function currentDataset(): number {
-        return 1;
+        return 0;
     }
 
     //% block="live dataset"
     export function liveDataset(): number {
-        return 2;
+        return 0;
     }
 
     //% block="test"
