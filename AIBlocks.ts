@@ -27,7 +27,7 @@ enum actionML {
 
 //% color="#8c800b"
 namespace Input{
- 
+
      //% block="live sensor 1 data"
     export function sensor1() {
         blocks.place(STONE, world(1, 4, 1));
