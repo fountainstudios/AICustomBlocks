@@ -93,6 +93,10 @@ namespace Datasets {
         return 2;
     }
 
+    //% block="test"
+    export function test(){
+    }
+
 }
 
 //% color="#8332A8"
