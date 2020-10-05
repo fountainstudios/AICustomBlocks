@@ -73,17 +73,17 @@ Datasets.test()
 //% color="#4C97FF"
 namespace Datasets {
 
-    //% block="%type| dataset"
+    `//% block="%type| dataset"
     export function dataset(type: datasetType, handler:() => void) {
-        `if(type == 2){
+        if(type == 2){
             handler;{
                 blocks.place(STONE, world(0, 4, 0));
             }
-        }`
+        }
     }
 
 
-    `//% block="historical dataset"
+    //% block="historical dataset"
     export function historicalDataset(): number {
         return 0;
     }
@@ -96,10 +96,10 @@ namespace Datasets {
     //% block="live dataset"
     export function liveDataset(): number {
         return 0;
-    }
-    `
+    }`
+    
 
-    //% block="test"
+    //% block="testy"
     export function test(){
     }
 
