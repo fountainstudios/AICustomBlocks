@@ -59,7 +59,7 @@ namespace Input{
 }
 
 //% color="#4C97FF"
-namespace Dataset {
+namespace Datasets{
 
     //% block="dataset"
     //% handlerStatement=1
