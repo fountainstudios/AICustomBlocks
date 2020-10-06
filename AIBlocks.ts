@@ -59,15 +59,17 @@ namespace Input{
 }
 
 //% color="#4C97FF"
-namespace Datasets {
+namespace Dataset {
+
+    //% block="dataset"
+    //% handlerStatement=1
+    export function setOfData_MT(handler: () => void) {
+        blocks.place(STONE, world(96, 61, -398));
+        handler();
+    }
 
     //% block="%type| dataset"
     //% handlerStatement=1
-    export function setOfData_MT(handler: () => void) {
-    blocks.place(STONE, world(96, 61, -398));
-    handler();
-    }
-
     export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
             blocks.place(STONE, world(0, 0, 100));
@@ -75,19 +77,19 @@ namespace Datasets {
     handler();
     }
 
-    //% block="historical dataset"
-    export function historicalDataset(): number{
-    return 0;
+    //%block="current dataset"
+    export function currentData():number{
+        return 0
     }
 
-    //% block="current dataset"
-    export function currentDataset(): number {
-    return 1;
+    //%block="historical dataset"
+    export function historicalData():number{
+        return 1
     }
 
-    //% block="live dataset"
-    export function liveDataset(): number {
-    return 2;
+    //%block="live dataset"
+    export function liveData():number{
+        return 2
     }
 
 }
@@ -98,8 +100,8 @@ namespace AI {
     //% block="machine learning"
     //% handlerStatement=1
     export function ml_MT(handler: () => void) {
-    blocks.place(STONE, world(110, 61, -398));
-    handler();
+        blocks.place(STONE, world(110, 61, -398));
+        handler();
     }
 
     //% block="input dataset"
@@ -119,7 +121,7 @@ namespace AI {
 
     //% block="machine learning"
     //% handlerStatement=1
-    export function ml_OO(handler: () => true) {
+    export function ml_OO(handler: () => void) {
         blocks.place(STONE, world(10, 10, 10)) 
         handler();
     }
@@ -180,4 +182,5 @@ namespace Goals {
     blocks.place(STONE, world(3, 4, 4));
     }
 }
+
 
