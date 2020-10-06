@@ -72,7 +72,7 @@ namespace Datasets{
     //% handlerStatement=1
     export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
-            blocks.place(STONE, world(0, 0, 100));
+            blocks.place(STONE, world(0, 4, 1));
         }
     handler();
     }
