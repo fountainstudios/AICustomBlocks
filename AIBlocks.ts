@@ -73,8 +73,8 @@ namespace Datasets{
     export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
             blocks.place(STONE, world(0, 4, 1));
+            handler();
         }
-    handler();
     }
 
     //%block="current dataset"
