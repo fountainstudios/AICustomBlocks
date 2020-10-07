@@ -61,14 +61,14 @@ namespace Input{
 //% color="#4C97FF"
 namespace Datasets{
 
-    //% block="dataset"
+    //% block="make dataset"
     //% handlerStatement=1
     export function setOfData_MT(handler: () => void) {
         blocks.place(STONE, world(96, 61, -398));
         handler();
     }
 
-    //% block="%type| dataset"
+    //% block="make %type| dataset"
     //% handlerStatement=1
     export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
@@ -92,6 +92,11 @@ namespace Datasets{
         return 2
     }
 
+    //% block="input dataset"
+    export function input_MT() {
+    blocks.place(STONE, world(110, 61, -397));
+    }
+
 }
 
 //% color="#8332A8"
@@ -103,20 +108,10 @@ namespace AI {
         blocks.place(STONE, world(110, 61, -398));
         handler();
     }
-
-    //% block="input dataset"
-    export function input_MT() {
-    blocks.place(STONE, world(110, 61, -397));
-    }
     
     //% block="analyze data"
     export function analyze_MT(){
         blocks.place(STONE, world(110, 61, -396));
-    }
-
-    //% block="place markers"
-    export function placeMarkers_MT(){
-        blocks.place(STONE, world(110, 61, -395));
     }
 
     //% block="machine learning"
@@ -146,7 +141,7 @@ namespace AI {
 }
 
 //% color="#2d854e"
-namespace Goals {
+namespace Output {
 
     //% block="Agent reach sensor 1"
     export function reach1_OO() {
@@ -180,6 +175,11 @@ namespace Goals {
     //% block="Agent reach sensor 4"
     export function reach4_OO() {
     blocks.place(STONE, world(3, 4, 4));
+    }
+
+    //% block="show locations"
+    export function showLocations_MT(){
+        blocks.place(STONE, world(110, 61, -395));
     }
 }
 
