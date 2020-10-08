@@ -199,8 +199,10 @@ namespace Test{
     //% handlerStatement=1
     export function testLoop(handler: () => void) {
         let i = 0
+        agent.teleport(world(103, 168, -393), WEST)
+    
         for(i = 0; i<2; i++){
-            handler();
+        handler();
         }
     }
 
