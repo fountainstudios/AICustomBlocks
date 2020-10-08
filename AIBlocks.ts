@@ -102,7 +102,7 @@ namespace Datasets{
 //% color="#8332A8"
 namespace AI {
     
-    //% block="machine learning"
+    //% block="unsupervised machine learning"
     //% handlerStatement=1
     export function ml_MT(handler: () => void) {
         blocks.place(STONE, world(110, 61, -398));
