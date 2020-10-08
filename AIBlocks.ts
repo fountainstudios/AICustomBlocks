@@ -36,9 +36,12 @@ namespace Input{
         blocks.place(STONE, world(96, 61, -395));
     }
 
-         //% block="live sensor 1 data"
+    //% block="live sensor 1 data"
     export function sensor1_OO() {
-        blocks.place(STONE, world(1, 4, 1));
+        `blocks.place(STONE, world(1, 4, 1));`
+        agent.move(FORWARD, 2)
+        agent.turn(TurnDirection.Left)
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 2 data"
@@ -71,8 +74,14 @@ namespace Datasets{
     //% block="make %type| dataset"
     //% handlerStatement=1
     export function setOfData_OO(type: datasetType, handler: () => void) {
+        `
         if(type == 2){
             blocks.place(STONE, world(0, 4, 1));
+            handler();
+        }
+        `
+        let i = 0
+        for(i = 0; i<2; i++){
             handler();
         }
     }
