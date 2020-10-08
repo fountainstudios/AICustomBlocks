@@ -2,9 +2,9 @@ enum datasetType {
     //% block="historical"
     historical = 0,
     //% block="current"
-    current = 1,
+    current,
     //% block="live"
-    live =  2
+    live
 }
 
 enum ML {
@@ -180,6 +180,26 @@ namespace Output {
     //% block="show locations"
     export function showLocations_MT(){
         blocks.place(STONE, world(110, 61, -395));
+    }
+}
+
+//% color="#ED82B6"
+namespace Test{
+
+    //% block="test loop"
+    //% handlerStatement=1
+    export function testLoop(handler: () => void) {
+        let i = 0
+        for(i = 0; i<2; i++){
+            handler();
+        }
+    }
+
+    //%block="test moves"
+    export function testMoves(){
+        agent.move(FORWARD, 2)
+        agent.turn(TurnDirection.Left)
+        agent.move(FORWARD, 2)
     }
 }
 
