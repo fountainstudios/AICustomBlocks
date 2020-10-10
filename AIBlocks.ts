@@ -228,7 +228,7 @@ namespace Output {
 
     //% block="show locations"
     export function showLocations_MTB(){
-        agent.move(FORWARD, 2)
+        agent.move(RIGHT, 2)
     }
 }
 
