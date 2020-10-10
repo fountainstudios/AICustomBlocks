@@ -38,7 +38,7 @@ namespace Input{
 
     //% block="location 2 picture data"
     export function location2PictureData_MTB() {
-        agent.move(RIGHT, 2)
+        agent.move(FORWARD, 2)
     }
 
     //% block="location 3 picture data"
