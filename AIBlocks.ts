@@ -155,7 +155,7 @@ namespace AI {
 
     //% block="analyze data"
     export function analyze_MTB(){
-        agent.move(LEFT, 2)
+        agent.move(LEFT, 3)
     }
 
     //% block="machine learning"
