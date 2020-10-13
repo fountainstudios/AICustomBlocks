@@ -131,7 +131,7 @@ namespace Datasets{
 
     //% block="extract patterns"
     export function extractPatterns_PR() {
-        agent.move(FORWARD, 4)
+        agent.move(LEFT, 4)
     }
 
     //%block="current dataset"
