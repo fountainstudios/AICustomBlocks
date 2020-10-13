@@ -229,6 +229,13 @@ namespace AI {
         }
     }
 
+    //% block="autonomous navigation algorithm"
+    //% handlerStatement=1
+    export function ml_OO2(handler: () => void) {
+        agent.move(DOWN, 3)
+        handler();
+    }
+
     //% block="analyze terrain data"
     export function analyze_OO(){
         agent.move(LEFT, 1)
