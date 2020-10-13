@@ -53,22 +53,32 @@ namespace Input{
 
     //% block="live sensor 1 data"
     export function sensor1_OO() {
-        agent.move(FORWARD, 2)
+        blocks.place(STONE, world(96, 61, -395));
     }
 
     //% block="live sensor 2 data"
     export function sensor2_OO() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 24)
+        agent.turnRight()
+        agent.move(FORWARD, 7)
+        agent.move(DOWN, 12)
+
+        agent.teleport(world(679, 66, 96), 180)
     }
 
     //% block="live sensor 3 data"
     export function sensor3_OO() {
-        agent.move(FORWARD, 2)
+        blocks.place(STONE, world(96, 61, -395));
     }
 
     //% block="live sensor 4 data"
     export function sensor4_OO() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 44)
+        agent.turnRight()
+        agent.move(FORWARD, 28)
+        agent.move(DOWN, 12)
+
+        agent.teleport(world(679, 66, 96), 180)
     }
 
     //% block="trap camera 1 data"
@@ -232,7 +242,7 @@ namespace AI {
     //% block="autonomous navigation algorithm"
     //% handlerStatement=1
     export function ml_OO2(handler: () => void) {
-        agent.move(DOWN, 3)
+        agent.move(DOWN, 5)
         handler();
     }
 
