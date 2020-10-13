@@ -293,16 +293,6 @@ namespace Output {
         agent.move(RIGHT, 2)
     }
 
-    //% block="show locations"
-    export function showLocations_PR(){
-        agent.move(BACK, 3)
-    }
-
-    //% block="genrate migration routes"
-    export function genRoutes_PR(){
-        agent.move(FORWARD, 4)
-    }
-
     //% block="locate ocelots"
     export function locateOcelots_PR(){
         agent.move(RIGHT, 4)
