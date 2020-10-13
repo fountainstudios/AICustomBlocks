@@ -185,7 +185,7 @@ namespace Datasets{
     //% block="compare %type0| dataset against %type1|"
     //% handlerStatement=1
     export function compare_PR(type0: datasetType, type1: datasetType) {
-        if(type0==0 && type1==1){
+        if(type0==1 && type1==0){
             agent.move(FORWARD, 2)
         }
     }
