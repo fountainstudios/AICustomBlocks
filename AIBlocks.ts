@@ -78,12 +78,12 @@ namespace Input{
 
     //% block="trap camera 2 data"
     export function trap2_PR() {
-        agent.move(RIGHT, 2)
+        agent.move(FORWARD, 2)
     }
 
     //% block="trap camera 3 data"
     export function trap3_PR() {
-        agent.move(LEFT, 3)
+        agent.move(FORWARD, 2)
     }
 
 }
@@ -237,11 +237,6 @@ namespace AI {
         blocks.place(STONE, world(10, 13, 10))  
     }
 
-    //% block="locate ocelots"
-    export function locateOcelots_PR(){
-        agent.move(RIGHT, 4)
-    }
-
     //% block="analyze pattern data"
     export function analyze_PR(){
         agent.move(LEFT, 3)
@@ -304,6 +299,11 @@ namespace Output {
     //% block="genrate migration routes"
     export function genRoutes_PR(){
         agent.move(FORWARD, 4)
+    }
+
+    //% block="locate ocelots"
+    export function locateOcelots_PR(){
+        agent.move(RIGHT, 4)
     }
 }
 
