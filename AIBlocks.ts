@@ -53,22 +53,22 @@ namespace Input{
 
     //% block="live sensor 1 data"
     export function sensor1_OO() {
-        blocks.place(STONE, world(1, 4, 1))
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 2 data"
     export function sensor2_OO() {
-        blocks.place(STONE, world(1, 4, 2));
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 3 data"
     export function sensor3_OO() {
-        blocks.place(STONE, world(1, 4, 3));
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 4 data"
     export function sensor4_OO() {
-        blocks.place(STONE, world(1, 4, 4));
+        agent.move(FORWARD, 2)
     }
 
     //% block="trap camera 1 data"
@@ -165,6 +165,13 @@ namespace Datasets{
     agent.move(RIGHT, 2)
     }
 
+    //% block="input %type|"
+    export function input_OO(type: datasetType){
+        if(type == 2){
+           agent.move(FORWARD, 3)
+        }
+    }
+
     //% block="compare %type0| dataset against %type1|"
     //% handlerStatement=1
     export function compare_PR(type0: datasetType, type1: datasetType) {
@@ -216,25 +223,20 @@ namespace AI {
     //% block="machine learning"
     //% handlerStatement=1
     export function ml_OO(handler: () => void) {
-        blocks.place(STONE, world(10, 10, 10)) 
-        handler();
+        let i = 0
+        for(i = 0; i<2; i++){
+            handler();
+        }
     }
 
     //% block="analyze terrain data"
     export function analyze_OO(){
-        blocks.place(STONE, world(10, 11, 10)) 
-    }
-
-    //% block="input %blockType|"
-    export function input_OO(blockType:number){
-        if(blockType == 0){
-           blocks.place(STONE, world(10, 12, 10))  
-        }
+        agent.move(LEFT, 1)
     }
 
     //% block="generate routes"
     export function genRoutes_OO(){
-        blocks.place(STONE, world(10, 13, 10))  
+        agent.move(RIGHT, 2)
     }
 
     //% block="analyze pattern data"
