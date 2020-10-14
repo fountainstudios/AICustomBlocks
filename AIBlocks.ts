@@ -227,7 +227,7 @@ namespace AI {
 
     //% block="analyze data"
     export function analyze_MTB(){
-        agent.move(LEFT, 3)
+        agent.move(RIGHT, 3)
     }
 
     //% block="machine learning"
@@ -307,7 +307,7 @@ namespace Output {
 
     //% block="show locations"
     export function showLocations_MTB(){
-        agent.move(RIGHT, 2)
+        agent.move(BACK, 1)
     }
 
     //% block="locate ocelots"
