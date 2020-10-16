@@ -53,32 +53,22 @@ namespace Input{
 
     //% block="live sensor 1 data"
     export function sensor1_OO() {
-        blocks.place(STONE, world(96, 61, -395));
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 2 data"
     export function sensor2_OO() {
-        agent.move(FORWARD, 24)
-        agent.turnRight()
-        agent.move(FORWARD, 7)
-        agent.move(DOWN, 12)
-
-        agent.teleport(world(679, 66, 96), 180)
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 3 data"
     export function sensor3_OO() {
-        blocks.place(STONE, world(96, 61, -395));
+        agent.move(FORWARD, 2)
     }
 
     //% block="live sensor 4 data"
     export function sensor4_OO() {
-        agent.move(FORWARD, 44)
-        agent.turnRight()
-        agent.move(FORWARD, 28)
-        agent.move(DOWN, 12)
-
-        agent.teleport(world(679, 66, 96), 180)
+        agent.move(FORWARD, 2)
     }
 
     //% block="trap camera 1 data"
@@ -268,36 +258,32 @@ namespace Output {
 
     //% block="Agent reach sensor 1"
     export function reach1_OO() {
-    agent.move(FORWARD, 4);
-    agent.turn(TurnDirection.Right);
-    agent.move(FORWARD, 3);
-    agent.destroy(FORWARD);
-    agent.collectAll()
-    agent.place(FORWARD);
-    blocks.place(STONE, world(3, 4, 1));
-    agent.teleport(world(0, 4, 0), WEST);
+    agent.move(FORWARD, 1)
     }
 
     //% block="Agent reach sensor 2"
     export function reach2_OO() {
-    blocks.place(STONE, world(3, 4, 2));
+        agent.move(FORWARD, 24)
+        agent.turnRight()
+        agent.move(FORWARD, 7)
+        agent.move(DOWN, 12)
+
+        agent.teleport(world(679, 66, 96), 180)
     }
 
     //% block="Agent reach sensor 3"
     export function reach3_OO() {
-    agent.move(FORWARD, 4);
-    agent.turn(TurnDirection.Left);
-    agent.move(FORWARD, 3);
-    agent.destroy(FORWARD);
-    agent.collectAll()
-    agent.place(FORWARD);
-    blocks.place(STONE, world(3, 4, 3));
-    agent.teleport(world(0, 4, 0), WEST);
+    agent.move(FORWARD, 1)
     }
 
     //% block="Agent reach sensor 4"
     export function reach4_OO() {
-    blocks.place(STONE, world(3, 4, 4));
+    agent.move(FORWARD, 44)
+        agent.turnRight()
+        agent.move(FORWARD, 28)
+        agent.move(DOWN, 12)
+
+        agent.teleport(world(679, 66, 96), 180)
     }
 
     //% block="show locations"
