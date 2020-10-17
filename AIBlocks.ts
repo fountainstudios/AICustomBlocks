@@ -263,7 +263,7 @@ namespace Output {
 
     //% block="Agent reach sensor 1"
     export function reach1_OO() {
-    agent.move(FORWARD, 1)
+    agent.move(DOWN, 5)
     }
 
     //% block="Agent reach sensor 2"
@@ -278,7 +278,7 @@ namespace Output {
 
     //% block="Agent reach sensor 3"
     export function reach3_OO() {
-    agent.move(FORWARD, 1)
+    agent.move(DOWN, 5)
     }
 
     //% block="Agent reach sensor 4"
