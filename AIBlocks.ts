@@ -170,7 +170,7 @@ namespace Datasets{
     agent.move(RIGHT, 2)
     }
 
-    //% block="input %type|"
+    //% block="input %type| dataset"
     export function input_OO(type: datasetType){
         if(type == 2){
            agent.move(FORWARD, 3)
