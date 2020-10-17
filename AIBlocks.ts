@@ -283,12 +283,13 @@ namespace Output {
 
     //% block="Agent reach sensor 4"
     export function reach4_OO() {
-    agent.move(FORWARD, 44)
-        agent.turnRight()
-        agent.move(FORWARD, 28)
-        agent.move(DOWN, 12)
+    agent.turnRight()
+    agent.move(FORWARD, 32)
+    agent.turnLeft()
+    agent.move(DOWN, 12)
+    agent.move(FORWARD, 5)
 
-        agent.teleport(world(679, 60, 96), 180)
+    agent.teleport(world(679, 60, 96), 180)
     }
 
     //% block="show locations"
