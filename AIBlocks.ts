@@ -118,6 +118,11 @@ namespace Datasets{
         }
     }
 
+    //% block="transfer data"
+    export function transferData(){
+        agent.move(UP, 6)
+    }
+
     //% block="make %type| dataset"
     //% handlerStatement=1
     export function setOfData_PR(type: datasetType, handler: () => void) {
@@ -268,7 +273,7 @@ namespace Output {
         agent.move(FORWARD, 7)
         agent.move(DOWN, 12)
 
-        agent.teleport(world(679, 66, 96), 180)
+        agent.teleport(world(679, 60, 96), 180)
     }
 
     //% block="Agent reach sensor 3"
@@ -283,7 +288,7 @@ namespace Output {
         agent.move(FORWARD, 28)
         agent.move(DOWN, 12)
 
-        agent.teleport(world(679, 66, 96), 180)
+        agent.teleport(world(679, 60, 96), 180)
     }
 
     //% block="show locations"
