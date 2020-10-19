@@ -274,8 +274,6 @@ namespace Output {
         agent.move(FORWARD, 12)
         agent.move(RIGHT, 4)
         agent.move(DOWN, 6)
-
-        agent.teleport(world(679, 66, 96), 180)
     }
 
     //% block="Agent reach sensor 3"
@@ -288,8 +286,6 @@ namespace Output {
     agent.move(RIGHT, 16)
     agent.move(DOWN, 6)
     agent.move(FORWARD, 2)
-
-    agent.teleport(world(679, 66, 96), 180)
     }
 
     //% block="show locations"
