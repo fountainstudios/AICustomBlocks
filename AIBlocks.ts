@@ -238,7 +238,10 @@ namespace AI {
     //% handlerStatement=1
     export function ml_OO2(handler: () => void) {
         agent.move(DOWN, 5)
-        handler();
+        let i = 0
+        for(i = 0; i<2; i++){
+            handler();
+        }
     }
 
     //% block="analyze terrain data"
@@ -268,10 +271,9 @@ namespace Output {
 
     //% block="Agent reach sensor 2"
     export function reach2_OO() {
-        agent.move(FORWARD, 24)
-        agent.turnRight()
-        agent.move(FORWARD, 7)
-        agent.move(DOWN, 12)
+        agent.move(FORWARD, 12)
+        agent.move(RIGHT, 4)
+        agent.move(DOWN, 6)
 
         agent.teleport(world(679, 66, 96), 180)
     }
@@ -283,11 +285,9 @@ namespace Output {
 
     //% block="Agent reach sensor 4"
     export function reach4_OO() {
-    agent.turnRight()
-    agent.move(FORWARD, 32)
-    agent.turnLeft()
-    agent.move(DOWN, 12)
-    agent.move(FORWARD, 5)
+    agent.move(RIGHT, 16)
+    agent.move(DOWN, 6)
+    agent.move(FORWARD, 2)
 
     agent.teleport(world(679, 66, 96), 180)
     }
