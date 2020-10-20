@@ -238,6 +238,7 @@ namespace AI {
     //% handlerStatement=1
     export function ml_OO2(handler: () => void) {
         agent.move(DOWN, 5)
+        handler();
     }
 
     //% block="analyze terrain data"
