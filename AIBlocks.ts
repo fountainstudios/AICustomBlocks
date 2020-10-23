@@ -86,6 +86,39 @@ namespace Input{
         agent.move(FORWARD, 2)
     }
 
+    //% block="get location 1 satelite data"
+    export function beacon1_SF() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="get location 2 satelite data"
+    export function beacon2_SF() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="get location 3 satelite data"
+    export function beacon3_SF() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="get location 4 satelite data"
+    export function beacon4_SF() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="get location 5 satelite data"
+    export function beacon5_SF() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="control satelite"
+    //% handlerStatement=1
+    export function runSatelite_SF(handler: () => void) {
+            let i = 0
+            for(i = 0; i<3; i++){
+            handler();
+        }
+    }
 }
 
 //% color="#4C97FF"
@@ -111,6 +144,17 @@ namespace Datasets{
     //% handlerStatement=1
     export function setOfData_OO(type: datasetType, handler: () => void) {
         if(type == 2){
+            let i = 0
+            for(i = 0; i<2; i++){
+            handler();
+            }
+        }
+    }
+
+    //% block="make %type| dataset"
+    //% handlerStatement=1
+    export function setOfData_SF(type: datasetType, handler: () => void){
+        if(type = 1){
             let i = 0
             for(i = 0; i<2; i++){
             handler();
@@ -170,6 +214,11 @@ namespace Datasets{
     agent.move(RIGHT, 2)
     }
 
+    //% block="input datasets"
+    export function input_SF() {
+    agent.move(RIGHT, 2)
+    }
+
     //% block="input %type| dataset"
     export function input_OO(type: datasetType){
         if(type == 2){
@@ -180,6 +229,14 @@ namespace Datasets{
     //% block="compare %type0| dataset against %type1|"
     //% handlerStatement=1
     export function compare_PR(type0: datasetType, type1: datasetType) {
+        if(type0==1 && type1==0){
+            agent.move(FORWARD, 2)
+        }
+    }
+
+    //% block="compare %type0| dataset against %type1|"
+    //% handlerStatement=1
+    export function compare_SF(type0: datasetType, type1: datasetType) {
         if(type0==1 && type1==0){
             agent.move(FORWARD, 2)
         }
@@ -200,6 +257,15 @@ namespace AI {
     //% block="unsupervised machine learning"
     //% handlerStatement=1
     export function ml_MTB(handler: () => void) {
+        let i = 0
+        for(i = 0; i<2; i++){
+            handler();
+        }
+    }
+
+    //% block="semi-supervised machine learning"
+    //% handlerStatement=1
+    export function ml_SF(handler: () => void) {
         let i = 0
         for(i = 0; i<2; i++){
             handler();
@@ -256,6 +322,11 @@ namespace AI {
         agent.move(LEFT, 3)
     }
 
+    //% block="run predictive analysis"
+    export function analyze_SF(){
+        agent.move(LEFT, 3)
+    }
+
 }
 
 //% color="#2d854e"
@@ -301,6 +372,11 @@ namespace Output {
 
     //% block="locate ocelots"
     export function locateOcelots_PR(){
+        agent.move(RIGHT, 4)
+    }
+
+    //% block="find best farming locations"
+    export function locateFarm_SF(){
         agent.move(RIGHT, 4)
     }
 }
