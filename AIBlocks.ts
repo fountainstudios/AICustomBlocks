@@ -119,6 +119,21 @@ namespace Input{
             handler();
         }
     }
+
+    //% block="location 1 water data"
+    export function waterData1_WQ() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="location 2 water data"
+    export function waterData2_WQ() {
+        agent.move(FORWARD, 2)
+    }
+
+    //% block="location 3 water data"
+    export function waterData3_WQ() {
+        agent.move(FORWARD, 2)
+    }
 }
 
 //% color="#4C97FF"
@@ -170,6 +185,17 @@ namespace Datasets{
     //% block="make %type| dataset"
     //% handlerStatement=1
     export function setOfData_PR(type: datasetType, handler: () => void) {
+        if(type == 0){
+            let i = 0
+            for(i = 0; i<2; i++){
+            handler();
+            }
+        }
+    }
+
+    //% block="make %type| dataset"
+    //% handlerStatement=1
+    export function setOfData_WQ(type: datasetType, handler: () => void) {
         if(type == 0){
             let i = 0
             for(i = 0; i<2; i++){
@@ -242,6 +268,13 @@ namespace Datasets{
         }
     }
 
+    //% block="input %type| dataset"
+    export function input_WQ(type: datasetType){
+        if(type == 0){
+           agent.move(FORWARD, 3)
+        }
+    }
+
 }
 
 //% color="#8332A8"
@@ -279,6 +312,20 @@ namespace AI {
         for(i = 0; i<2; i++){
             handler();
         }
+    }
+
+    //% block="supervised machine learning"
+    //% handlerStatement=1
+    export function ml_WQ(handler: () => void) {
+        let i = 0
+        for(i = 0; i<2; i++){
+            handler();
+        }
+    }
+
+    //% block="analyze water data"
+    export function analyze_WQ(){
+        agent.move(RIGHT, 2)
     }
     
     //% block="analyze data"
@@ -378,6 +425,11 @@ namespace Output {
     //% block="find best farming locations"
     export function locateFarm_SF(){
         agent.move(RIGHT, 4)
+    }
+
+    //% block="locate pollution sources"
+    export function locatePollution_WQ(){
+        agent.move(RIGHT, 3)
     }
 }
 
