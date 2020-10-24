@@ -86,32 +86,32 @@ namespace Input{
         agent.move(FORWARD, 2)
     }
 
-    //% block="get location 1 satelite data"
+    //% block="get location 1 satellite data"
     export function beacon1_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 2 satelite data"
+    //% block="get location 2 satellite data"
     export function beacon2_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 3 satelite data"
+    //% block="get location 3 satellite data"
     export function beacon3_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 4 satelite data"
+    //% block="get location 4 satellite data"
     export function beacon4_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="get location 5 satelite data"
+    //% block="get location 5 satellite data"
     export function beacon5_SF() {
         agent.move(FORWARD, 1)
     }
 
-    //% block="control satelite"
+    //% block="control satellite"
     //% handlerStatement=1
     export function runSatelite_SF(handler: () => void) {
             let i = 0
