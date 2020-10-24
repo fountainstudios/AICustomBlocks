@@ -88,27 +88,27 @@ namespace Input{
 
     //% block="get location 1 satelite data"
     export function beacon1_SF() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 1)
     }
 
     //% block="get location 2 satelite data"
     export function beacon2_SF() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 1)
     }
 
     //% block="get location 3 satelite data"
     export function beacon3_SF() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 1)
     }
 
     //% block="get location 4 satelite data"
     export function beacon4_SF() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 1)
     }
 
     //% block="get location 5 satelite data"
     export function beacon5_SF() {
-        agent.move(FORWARD, 2)
+        agent.move(FORWARD, 1)
     }
 
     //% block="control satelite"
@@ -154,7 +154,7 @@ namespace Datasets{
     //% block="make %type| dataset"
     //% handlerStatement=1
     export function setOfData_SF(type: datasetType, handler: () => void){
-        if(type = 1){
+        if(type == 1){
             let i = 0
             for(i = 0; i<2; i++){
             handler();
