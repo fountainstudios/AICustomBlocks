@@ -196,7 +196,7 @@ namespace Datasets{
     //% block="make %type| dataset"
     //% handlerStatement=1
     export function setOfData_WQ(type: datasetType, handler: () => void) {
-        if(type == 0){
+        if(type == 1){
             let i = 0
             for(i = 0; i<2; i++){
             handler();
@@ -270,7 +270,7 @@ namespace Datasets{
 
     //% block="input %type| dataset"
     export function input_WQ(type: datasetType){
-        if(type == 0){
+        if(type == 1){
            agent.move(FORWARD, 3)
         }
     }
