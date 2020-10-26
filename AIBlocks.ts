@@ -429,7 +429,7 @@ namespace Output {
 
     //% block="locate pollution sources"
     export function locatePollution_WQ(){
-        agent.move(RIGHT, 3)
+        agent.move(LEFT, 3)
     }
 }
 
