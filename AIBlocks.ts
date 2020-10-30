@@ -387,7 +387,7 @@ namespace Output {
     //% block="Agent reach sensor 2"
     export function reach2_OO() {
         agent.move(FORWARD, 24)
-        agent.move(RIGHT, 8)
+        agent.move(RIGHT, 7)
         agent.move(DOWN, 12)
 
         agent.teleport(world(679, 61, 96), 180)

@@ -12,7 +12,7 @@
     ],
     "public": true,
     "targetVersions": {
-        "target": "1.5.45",
+        "target": "1.5.49",
         "targetId": "minecraft"
     },
     "supportedTargets": [
